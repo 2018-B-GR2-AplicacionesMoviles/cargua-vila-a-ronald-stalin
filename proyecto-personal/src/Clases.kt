@@ -1,11 +1,9 @@
 import java.util.*
 
 
-class Tipo(public val nombreTipo: String){}
-
-class Producto(val nombre: String,val tipo: Tipo, val unidades: Double,val precio:Double){
+class Producto(val nombre: String,val tipo: String, val unidades: Double,val precio:Double){
     override fun toString(): String{
-        return "\t${this.nombre}\t${this.tipo.nombreTipo}\t\t${this.unidades}\t\t\t${this.precio}"
+        return "\t${this.nombre}\t${this.tipo}\t\t${this.unidades}\t\t\t${this.precio}"
     }
 }
 class Usuario(val nombre: String, val apellido: String, val cedula: String){
@@ -81,12 +79,5 @@ class Controladores {
             return reporte
         }
 
-        fun totalCarrito():Double{
-            var total: Double = 0.00
-            for (pelicula in compra){
-                total += pelicula.precio
-            }
-            return  total
-        }
     }
 }

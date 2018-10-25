@@ -1,8 +1,8 @@
 fun ingresarDatos(){
-    BaseDeDatos.agregarProductos(Producto("arroz", Tipo("Granos"),2.0,2.50))
-    BaseDeDatos.agregarProductos(Producto("frejol",Tipo("Granos"),1.0,1.00))
-    BaseDeDatos.agregarProductos(Producto("atun",Tipo("enlatados"),2.0,3.75))
-    BaseDeDatos.agregarProductos(Producto("pollo", Tipo("carnes blancas"),2.5,4.00))
+    BaseDeDatos.agregarProductos(Producto("arroz", "Granos",2.0,2.50))
+    BaseDeDatos.agregarProductos(Producto("frejol","Granos",1.0,1.00))
+    BaseDeDatos.agregarProductos(Producto("atun","enlatados",2.0,3.75))
+    BaseDeDatos.agregarProductos(Producto("pollo", "carnes blancas",2.5,4.00))
 
 }
 
@@ -27,16 +27,12 @@ fun menu(){
                 if (respuesta != null) {
                     println("Producto encontrado: " +
                             "\nNombre: ${respuesta.nombre} " +
-                            "\nTipo: ${respuesta.tipo.nombreTipo} " +
+                            "\nTipo: ${respuesta.tipo} " +
                             "\nPrecio: ${respuesta.precio}")
-
                     subMenu(respuesta)
-
                 } else {
                     println("Producto no encontrado")
-
                 }
-
             }
             "2" -> {
                 if (Controladores.compra.size > 0) {
@@ -44,9 +40,7 @@ fun menu(){
                     println("${Controladores.comprar("", "", "")}")
                 } else {
                     println("\nNo tiene registrado ningun producto\n\n")
-
                 }
-
             }
             "3"->{
                 if (Controladores.compra.size > 0){
@@ -71,10 +65,8 @@ fun menu(){
                             else ->{
                                 println("Opcion Incorrecta")
                             }
-
                         }
                         break@loop
-
                     }while (true)
                 }
                 println("Fin")
@@ -84,12 +76,8 @@ fun menu(){
                 println("Ha ingresado una opcion incorrecta")
             }
         }
-
     }while (true)
-
 }
-
-
 fun subMenu(producto: Producto){
     loop@ do{
         print("Agregar (Si)1/2(No): ")
@@ -119,10 +107,8 @@ fun subMenu(producto: Producto){
                         else ->{
                             println("Opcion Incorrecta")
                         }
-
                     }
                     break@loop
-
                 }while (true)
             }
             "2" ->{
@@ -133,10 +119,8 @@ fun subMenu(producto: Producto){
             }
         }
         break@loop
-
     }while (true)
 }
-
 fun main(args: Array<String>){
     ingresarDatos()
     menu()
