@@ -17,6 +17,7 @@ class Detalle(val producto: Producto,val factura:Factura){
     }
 }
 class Factura(val fechaFactura: Date,val codFactura:String,val usuario: Usuario)
+
 class BaseDeDatos{
     companion object {
         val Producto: ArrayList<Producto> = ArrayList()
@@ -70,13 +71,12 @@ class Controladores {
                 BaseDeDatos.agregarDetalles(detalle)
             }
             BaseDeDatos.agregarFacturas(factura)
-            var reporte = ""
+            var resultado = ""
             for (detalle in ListaDetalles) {
-                reporte += "\n"+detalle
+                resultado += "\n"+detalle
             }
-
-            reporte +="\n Total: ${total}"
-            return reporte
+            resultado +="\n Total: ${total}"
+            return resultado
         }
 
     }
