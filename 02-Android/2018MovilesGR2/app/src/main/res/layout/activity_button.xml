@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonActivity">
+
+    <TextView
+        android:id="@+id/textView_RevibeDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text_Correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName|textWebEmailAddress"
+        android:text="Correo"
+        app:layout_constraintEnd_toEndOf="@+id/textView_RevibeDatos"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/textView_RevibeDatos"
+        app:layout_constraintTop_toBottomOf="@+id/textView_RevibeDatos" />
+
+    <EditText
+        android:id="@+id/text_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="subject"
+        app:layout_constraintEnd_toEndOf="@+id/text_Correo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_Correo"
+        app:layout_constraintTop_toBottomOf="@+id/text_Correo" />
+
+    <EditText
+        android:id="@+id/text_Texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Texto"
+        app:layout_constraintEnd_toEndOf="@+id/text_subject"
+        app:layout_constraintStart_toStartOf="@+id/text_subject"
+        app:layout_constraintTop_toBottomOf="@+id/text_subject" />
+
+    <Button
+        android:id="@+id/boton_enviar_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="enviar intent implicito"
+        app:layout_constraintEnd_toEndOf="@+id/text_Texto"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/text_Texto"
+        app:layout_constraintTop_toBottomOf="@+id/text_Texto" />
+</android.support.constraint.ConstraintLayout>
