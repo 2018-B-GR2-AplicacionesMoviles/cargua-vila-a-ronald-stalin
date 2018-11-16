@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Calendario"></activity>
+        <activity android:name=".Calendario" />
+        <activity android:name=".pantalla2Activity"></activity>
     </application>
 
 </manifest>
