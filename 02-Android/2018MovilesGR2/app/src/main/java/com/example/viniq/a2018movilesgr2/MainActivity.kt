@@ -20,10 +20,17 @@ class MainActivity : AppCompatActivity() {
                 .setOnClickListener {
                     this.irAPantallaDeIntentRespuesta()
                 }
+        botonCVida
+                .setOnClickListener{
+                    this.irAPantallaCicloVida()
+                }
     }
 
     //metodo para ir a otra pantalla
-
+    fun irAPantallaCicloVida(){
+        val cicloRespuesta = Intent(this, CicloVidaActivity::class.java)
+        this.startActivity(cicloRespuesta)
+    }
     fun irAPantallaBotones() {
         //intent
         //val imnutable no puede ser reasignada
