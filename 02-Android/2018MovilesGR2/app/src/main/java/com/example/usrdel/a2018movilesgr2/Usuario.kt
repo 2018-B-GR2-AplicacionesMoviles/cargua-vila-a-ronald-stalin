@@ -1,4 +1,4 @@
-package com.example.viniq.a2018movilesgr2
+package com.example.usrdel.a2018movilesgr2
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -8,7 +8,6 @@ class Usuario(public var nombre: String,
               var edad: Int,
               var fechaNacimiento: Date,
               var sueldo: Double) : Parcelable {
-
     constructor(parcel: Parcel) : this(
             parcel.readString(),
             parcel.readInt(),
@@ -31,7 +30,6 @@ class Usuario(public var nombre: String,
         return "${nombre}"
     }
 
-
     companion object CREATOR : Parcelable.Creator<Usuario> {
         override fun createFromParcel(parcel: Parcel): Usuario {
             return Usuario(parcel)
@@ -41,9 +39,7 @@ class Usuario(public var nombre: String,
             return arrayOfNulls(size)
         }
     }
-
 }
 
 
 // val adrian = Usuario("asdasd")
-
