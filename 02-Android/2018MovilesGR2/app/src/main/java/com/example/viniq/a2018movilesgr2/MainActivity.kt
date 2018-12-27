@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,8 +25,28 @@ class MainActivity : AppCompatActivity() {
                 .setOnClickListener{
                     this.irAPantallaCicloVida()
                 }
+        button_parcelabel
+                .setOnClickListener {
+                    this.irActividadIntent()
+                }
     }
 
+    fun irActividadIntent() {
+        val intentActividadIntent = Intent(
+                this,
+                ParcelabelActivity::class.java
+        )
+
+        val ronald = Usuario(
+                "Ronald",
+                29,
+                Date(1989, 6, 10),
+                12.00)
+        val mascota = Mascota("Pepe",ronald)
+        intentActividadIntent.putExtra("usuario",ronald)
+        intentActividadIntent.putExtra("mascota",mascota)
+        startActivity(intentActividadIntent)
+    }
     //metodo para ir a otra pantalla
     fun irAPantallaCicloVida(){
         val cicloRespuesta = Intent(this, CicloVidaActivity::class.java)
