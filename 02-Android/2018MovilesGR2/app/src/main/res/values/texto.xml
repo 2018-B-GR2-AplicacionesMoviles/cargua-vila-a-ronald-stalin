@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
- <string name="newText">Hola mundo</string>
-
- <string name="segundoTexto">EPN</string>
- <string name="textoIzquierda">Sistemas</string>
- <string name="textoDerecha">Moviles</string>
-
-
+    <string name="textoPrincipal">Hello World!</string>
 </resources>

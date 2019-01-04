@@ -10,9 +10,9 @@
         android:id="@+id/texto_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="108dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nombre"
@@ -22,10 +22,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/texto_apellifo"
+        android:id="@+id/texto_apellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Apellido"
@@ -35,13 +36,15 @@
         app:layout_constraintTop_toBottomOf="@+id/texto_nombre" />
 
     <Button
-        android:id="@+id/button_devolver_respultado"
+        android:id="@+id/button_devolver_respuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="OK"
-        app:layout_constraintEnd_toEndOf="@+id/texto_apellifo"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/texto_apellifo"
-        app:layout_constraintTop_toBottomOf="@+id/texto_apellifo" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:text="Ok"
+        app:layout_constraintEnd_toEndOf="@+id/texto_apellido"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/texto_apellido"
+        app:layout_constraintTop_toBottomOf="@+id/texto_apellido" />
 </android.support.constraint.ConstraintLayout>

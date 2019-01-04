@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="newText">others country!!</string>
+    <string name="textoPrincipal">Hola Mundo!</string>
 </resources>

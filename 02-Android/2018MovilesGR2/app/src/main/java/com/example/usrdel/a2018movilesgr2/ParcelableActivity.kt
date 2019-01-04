@@ -1,4 +1,4 @@
-package com.example.viniq.a2018movilesgr2
+package com.example.usrdel.a2018movilesgr2
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
