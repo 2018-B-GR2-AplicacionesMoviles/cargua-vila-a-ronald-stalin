@@ -5,7 +5,7 @@ import android.os.Parcelable
 import java.util.*
 
 class Usuario(public var nombre: String,
-              var edad: Int,
+              var edad: Int, //usu
               var fechaNacimiento: Date,
               var sueldo: Double) : Parcelable {
     constructor(parcel: Parcel) : this(

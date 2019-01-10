@@ -27,11 +27,17 @@ class PrimerFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val textoNombre = edit_text_nombre.text
-        val textoDescripcion = edit_text_descripcion.text
+
+        val helper = SqliteHelper(context)
+
+        val respuestaUsuario = helper.existeUsuarioFormulario()
+
+        edit_text_nombre.setText(respuestaUsuario.nombre)
+        edit_text_descripcion.setText(respuestaUsuario.descripcion)
+
         Log.i("bdd", "Vamos a recuperar los datos")
-        Log.i("bdd", "$textoNombre")
-        Log.i("bdd", "$textoDescripcion ")
+
+
 
         if (arguments != null) {
 
@@ -49,8 +55,28 @@ class PrimerFragment : Fragment() {
         val textoNombre = edit_text_nombre.text
         val textoDescripcion = edit_text_descripcion.text
         Log.i("bdd", "Vamos a guardar los datos")
-        Log.i("bdd", "$textoNombre")
-        Log.i("bdd", "$textoDescripcion ")
+
+        // Verificar si ya existe los datos
+
+
+        val helper = SqliteHelper(context)
+
+        val noExisteRegistroDeUsuario = helper.existeUsuarioFormulario().nombre == null
+
+        if (noExisteRegistroDeUsuario) {
+
+            helper
+                    .crearUsuarioFormulario(
+                            textoNombre.toString(),
+                            textoDescripcion.toString()
+                    )
+        } else {
+            helper
+                    .actualizarUsuarioFormulario(
+                            textoNombre.toString(),
+                            textoDescripcion.toString()
+                    )
+        }
     }
 
 }
